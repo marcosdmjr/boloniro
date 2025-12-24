@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juntos pelo Brasil - Campanha de Apoio</title>
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta property="og:image" content="https://bolt.new/static/og_default.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="https://bolt.new/static/og_default.png">
+    <link rel="stylesheet" href="style.css">
+</head>
+<script
+	src="https://cdn.jsdelivr.net/gh/xTracky/static@latest/utm-handler.js"
+	data-token="8216216e-e81a-45d1-b34c-f2b10c369da8"
+>
+</script>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <h1 class="header-title">Isso não é justiça. É intimidação.</h1>
+            <p class="header-subtitle">Hoje esmagam Bolsonaro. Amanhã, qualquer voz contrária.</p>
+        </div>
+    </header>
+
+    <!-- Seção do Vídeo -->
+    <section class="video-section">
+        <div class="container">
+            <div class="video-wrapper">
+                <video id="mainVideo" class="video-player" autoplay muted loop playsinline>
+                    <source src="public/vsl.mp4" type="video/mp4">
+                    Seu navegador não suporta vídeo HTML5.
+                </video>
+                <button id="soundButton" class="sound-button">
+                    <span class="sound-icon">🔊</span>
+                    <span class="sound-text">Clique aqui<br>para ativar o som</span>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção de Doação Valores -->
+    <section class="donation-values-section">
+        <div class="container">
+            <h2 class="donation-title">O futuro do Brasil está em sua colaboração!</h2>
+            <p class="donation-text">Cada contribuição mostra que o povo está ao lado de Bolsonaro e contra a ditadura do STF.</p>
+
+            <div class="donation-buttons">
+                <button class="donation-btn" data-amount="20">R$ 20,00</button>
+                <button class="donation-btn" data-amount="30">R$ 30,00</button>
+                <button class="donation-btn" data-amount="40">R$ 40,00</button>
+                <button class="donation-btn" data-amount="50">R$ 50,00</button>
+                <button class="donation-btn" data-amount="100">R$ 100,00</button>
+                <button class="donation-btn" data-amount="200">R$ 200,00</button>
+                <button class="donation-btn" data-amount="300">R$ 300,00</button>
+                <button class="donation-btn" data-amount="500">R$ 500,00</button>
+                <button class="donation-btn" data-amount="1000">R$ 1.000,00</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cards de Métricas -->
+    <section class="metrics-section">
+        <div class="container">
+            <div class="metrics-grid">
+                <div class="metric-card">
+                    <span class="metric-icon">✓</span>
+                    <p class="metric-label">Pessoas participantes</p>
+                    <p class="metric-value" id="participantsCount">15.986</p>
+                </div>
+                <div class="metric-card">
+                    <span class="metric-icon">✓</span>
+                    <p class="metric-label">Total arrecadado</p>
+                    <p class="metric-value" id="totalAmount">R$ 531.130,00</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Barra de Progresso -->
+    <section class="progress-section">
+        <div class="container">
+            <div class="progress-wrapper">
+                <div class="progress-header">
+                    <span class="progress-label">Meta da campanha</span>
+                    <span class="progress-percentage" id="progressPercentage">27%</span>
+                </div>
+                <div class="progress-bar">
+                    <div class="progress-fill" id="progressFill" style="width: 27%"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção de Doação -->
+    <section class="donation-section">
+        <div class="container">
+            <!-- Cards de Recompensas -->
+            <div class="rewards-inline">
+                <h3 class="rewards-inline-title">Recompensas para apoiadores</h3>
+                <p class="rewards-inline-subtitle">Contribua e receba brindes exclusivos da campanha!</p>
+
+                <div class="rewards-grid">
+                    <div class="reward-card">
+                        <div class="reward-image">
+                            <img src="/image copy.png" alt="Kit Apoiador - Todos por Bolsonaro 2026">
+                        </div>
+                        <h3 class="reward-title">Kit Apoiador</h3>
+                        <p class="reward-amount">Doações a partir de R$ 50,00</p>
+                        <ul class="reward-items">
+                            <li>Boné exclusivo</li>
+                            <li>Caneca personalizada</li>
+                        </ul>
+                        <button class="reward-donate-btn" data-amount="50">Doe agora</button>
+                    </div>
+
+                    <div class="reward-card reward-featured">
+                        <div class="reward-badge">Mais popular</div>
+                        <div class="reward-image">
+                            <img src="/image.png" alt="Kit Premium - Todos por Bolsonaro 2026">
+                        </div>
+                        <h3 class="reward-title">Kit Premium</h3>
+                        <p class="reward-amount">Doações acima de R$ 100,00</p>
+                        <ul class="reward-items">
+                            <li>Caneca personalizada</li>
+                            <li>Camisa exclusiva</li>
+                            <li>Boné exclusivo</li>
+                        </ul>
+                        <button class="reward-donate-btn" data-amount="100">Doe agora</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-section">
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Para onde vai a Doação?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Sua doação é destinada para quitação das multas impostas ao <strong>Jair Messias Bolsonaro</strong>, que ultrapassam mais de <strong>R$ 1.376.400</strong>. Esta arrecadação é uma forma de mostrar que estamos ao lado do nosso capitão.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Qual a importância dessa doação?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Mais do que um valor financeiro, essa arrecadação demonstra que o povo está unido e disposto a defender a liberdade e a justiça. Cada doação simboliza resistência contra perseguições consideradas políticas.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Essa arrecadação é Oficial do Bolsonaro?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Todos os valores arrecadados são administrados pela <strong>Organização Oficial do Bolsonaro</strong>, que presta contas regularmente por meio de relatórios públicos e auditorias legalizadas. Também conta com o apoio de Deputados e Senadores apoiadores de direita.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Esta arrecadação conta com apoio de:</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <ul class="supporters-list">
+                            <li>Nikolas Ferreira (PL-MG)</li>
+                            <li>Eduardo Bolsonaro (PL-SP)</li>
+                            <li>Flávio Bolsonaro (PL-RJ)</li>
+                            <li>Bia Kicis (PL-DF)</li>
+                            <li>Carla Zambelli (PL-SP)</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Formulário de Endereço -->
+            <div id="addressForm" class="address-form" style="display: none;">
+                <div class="form-header">
+                    <h3>Dados para envio da recompensa</h3>
+                    <p>Preencha seu endereço para receber o kit</p>
+                </div>
+
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label for="cep">CEP *</label>
+                        <input type="text" id="cep" placeholder="00000-000" maxlength="9" required>
+                        <span class="form-helper">Digite o CEP para preencher automaticamente</span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="street">Rua *</label>
+                        <input type="text" id="street" placeholder="Nome da rua" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="number">Número *</label>
+                        <input type="text" id="number" placeholder="Número" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="complement">Complemento</label>
+                        <input type="text" id="complement" placeholder="Apto, bloco, etc">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="neighborhood">Bairro *</label>
+                        <input type="text" id="neighborhood" placeholder="Bairro" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="city">Cidade *</label>
+                        <input type="text" id="city" placeholder="Cidade" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="state">Estado *</label>
+                        <input type="text" id="state" placeholder="UF" maxlength="2" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="name">Nome completo *</label>
+                        <input type="text" id="name" placeholder="Seu nome completo" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="phone">Telefone *</label>
+                        <input type="text" id="phone" placeholder="(00) 00000-0000" required>
+                    </div>
+                </div>
+
+                <div class="shipping-info">
+                    <div class="shipping-box">
+                        <p class="shipping-label">Valor da doação:</p>
+                        <p class="shipping-value" id="donationValue">R$ 0,00</p>
+                    </div>
+                    <div class="shipping-box">
+                        <p class="shipping-label">Frete:</p>
+                        <p class="shipping-value">R$ 20,00</p>
+                    </div>
+                    <div class="shipping-box shipping-total">
+                        <p class="shipping-label">Total (Doação + Frete):</p>
+                        <p class="shipping-value" id="totalValue">R$ 0,00</p>
+                    </div>
+                </div>
+
+                <button id="confirmDonation" class="confirm-btn">Gerar PIX</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Bancada da direita • Brasil Unido</p>
+        </div>
+    </footer>
+
+    <!-- Modal PIX -->
+    <div id="pixModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>PIX Gerado!</h2>
+                <button class="modal-close" id="closeModal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <p class="modal-status">Aguardando pagamento...</p>
+
+                <div id="pixBreakdown" class="pix-breakdown">
+                    <div class="breakdown-item">
+                        <span>Doação:</span>
+                        <strong id="modalDonationAmount">R$ 0,00</strong>
+                    </div>
+                    <div class="breakdown-item" id="shippingRow" style="display: none;">
+                        <span>Frete recompensa:</span>
+                        <strong>R$ 20,00</strong>
+                    </div>
+                    <div class="breakdown-total">
+                        <span>Total do PIX:</span>
+                        <strong id="modalAmount">R$ 0,00</strong>
+                    </div>
+                </div>
+
+                <div class="qrcode-wrapper">
+                    <div id="qrcodeContainer"></div>
+                </div>
+
+                <div class="pix-code-wrapper">
+                    <p class="pix-code-label">Código PIX (Copia e Cola):</p>
+                    <div class="pix-code-box">
+                        <input type="text" id="pixCode" class="pix-code-input" readonly>
+                    </div>
+                    <button class="copy-btn" id="copyButton">
+                        <span class="copy-icon">📋</span> Copiar código
+                    </button>
+                </div>
+
+                <div class="timer-wrapper">
+                    <p class="timer-label">⏱️ Expira em: <span id="timer">15:00</span></p>
+                </div>
+
+                <div id="successMessage" class="success-message" style="display: none;">
+                    <span class="success-icon">✅</span>
+                    <p>Pagamento confirmado! Obrigado pelo apoio 🇧🇷</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script type="module" src="script.js"></script>
+</body>
+</html>
